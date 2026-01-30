@@ -3,7 +3,7 @@ class devlogin {
     emailField = "#email"
     passwordField = "#password"
     email = "abass@blusalt.net"
-    password = "@Blusalt2027"
+    password = "@Blusalt2030"
     submitbtn = "button[type='submit']"
 
     login (){

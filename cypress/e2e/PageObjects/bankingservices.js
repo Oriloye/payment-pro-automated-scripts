@@ -11,7 +11,7 @@ class bankingservices {
     firstnameinput = "#first_name"
     lastnameinput = "#last_name"
     D0B = "input[placeholder='Choose Date of Birth']"
-    D0B16 = "button[aria-label='Sunday, July 1st, 2012']"
+    D0B16 = "button[aria-label='Tuesday, January 1st, 2013']"
     Phonenuminput = "#mobile_no"
     emailinput = "#email"
     maleselect = "#male"
@@ -46,7 +46,7 @@ class bankingservices {
     directoremail = "#director_email"
     drectorphoneno = "#director_phone"
     DOB2 = "input[placeholder='Pick Date of Birth']"
-    DOB162 = "button[aria-label='Thursday, July 1st, 2010']"
+    DOB162 = "button[aria-label='Wednesday, January 5th, 2011']"
     Countrydropdown = "#country"
     //contactkyc
     Otheridtype = "#other_id"
@@ -261,7 +261,7 @@ creategroupbeneficiary = 'a[href="/banking-services/transfers/beneficiaries/crea
             cy.get(this.registrationnumber).type('3445')
             cy.get(this.Tin).type(4000)
             cy.get(this.Dateofestablishment).click()
-            cy.get("button[aria-label='Tuesday, July 1st, 2025']").click()
+            cy.get("button[aria-label='Today, Wednesday, January 28th, 2026']").click()
             
             cy.get(this.businesstype).click()
              cy.get('[role="group"]').should('be.visible').each(() => {
@@ -362,9 +362,9 @@ creategroupbeneficiary = 'a[href="/banking-services/transfers/beneficiaries/crea
 
         cy.get(this.Idnumber).type('864677366')
         cy.get(this.issuedate).click()
-        cy.get("button[aria-label='Tuesday, July 1st, 2025").click()
+        cy.get("button[aria-label='Sunday, January 25th, 2026']").click()
         cy.get(this.expirynumber).click()
-         cy.get("button[aria-label='Wednesday, July 30th, 2025']").eq(0).click()
+         cy.get("button[aria-label='Saturday, January 31st, 2026']").eq(0).click()
 
 
         cy.get(this.submitbtn).click()
@@ -408,7 +408,7 @@ Personalwalletcreationusd() {
 
         cy.wait(2000)
 
-        const firstNames = ['John', 'Grace', 'Chinonso', 'Elijah', 'Ada', 'David'];
+        const firstNames = ['John', 'Grace', 'Chinonso', 'Elijah', 'favour', 'David'];
             const lastNames = ['Okafor', 'Smith', 'Johnson', 'Bello', 'Taylor', 'Ogunleye'];
 
             const getRandomItem = (arr) => arr[Math.floor(Math.random() * arr.length)];
@@ -453,7 +453,7 @@ Personalwalletcreationusd() {
 
         console.log(this.emailinput); // e.g. abcd1234@mailinator.com
 
-
+        
         cy.get(this.tier1select).click()
         cy.get(this.maleselect).click()
         cy.get(this.nationalitydropdown).click()

@@ -110,6 +110,8 @@ class account {
         cy.xpath(this.tabmenu).click()
         cy.contains(this.accountMenu).click()
         cy.contains(this.viewCompliance).click()
+        cy.wait(2000)
+    
         cy.xpath(this.BusinessContactInfo).should('be.visible')
         cy.wait(2000)
         cy.xpath(this.businessProfileInfo).should('be.visible')
@@ -124,19 +126,23 @@ class account {
         cy.xpath("//input[@placeholder='Pick Date of Birth']").click()
         cy.get('svg.lucide-chevron-down').eq(2).parent().click();
         cy.xpath("//button[normalize-space()='2000']").click()
-        cy.xpath("//button[normalize-space()='January']").click()
+        cy.xpath("//button[normalize-space()='January']").should('be.visible')
+        cy.get('[data-calendar-item-id="month-January"]')
+  .should('be.visible')
+  .click()
         cy.xpath("//button[normalize-space()='11']").click()
-        //cy.get('#country').click()
-        //cy.xpath(this.searchbar).type('Nigeria')
-        //cy.xpath("//div[@data-value='Nigeria']")
-        //.should('be.visible')
-        //.click();
+        
+        cy.get('#country').click()
+        cy.xpath(this.searchbar).type('Nigeria')
+    cy.xpath("//div[@data-value='Nigeria']")
+        .should('be.visible')
+        .click();
 
         cy.xpath(this.state).click()
         cy.xpath(this.searchbar).type('Lagos')
         cy.xpath("//div[@data-value='Lagos']").click();
         cy.wait(2000)
-        //cy.xpath("//input[@id='phone_number']").type(fakeData.phoneNumber);
+        cy.xpath("//input[@id='phone_number']").type(fakeData.phoneNumber);
         
         const Bvn = generateBvn();
         cy.get(this.Bvn).type(Bvn)

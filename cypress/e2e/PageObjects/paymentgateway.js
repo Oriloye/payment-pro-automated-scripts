@@ -82,7 +82,7 @@ class Paymentgateway{
     Subtypedropdown = "#subscription_type"
     Intervaldropdown = "#interval"
     monthlyoptiondropdown = "div[id='radix-:r1d8:']" 
-    onetimesubtype = "div[id='radix-:r1d1:']"
+    onetimesubtype = "div[id='radix-:r5m9:']"
 
 //invoicing 
     invoicingtab = "a[href='/payment-gateway/invoicing']" //xpath
@@ -94,8 +94,8 @@ class Paymentgateway{
     itemquatintty = "input[id='line_items[0].quantity']"
     quantity  = "50"
     Createinvoicebtn = "//span[@class='hidden lg:block'][normalize-space()='Create Invoice']"
-    invoicestartdate = "//button[@aria-label='Sunday, July 27th, 2025']"
-    invoiceenddate = "//button[@aria-label='Thursday, July 31st, 2025']"
+    invoicestartdate = "//button[@aria-label='Thursday, January 29th, 2026']"
+    invoiceenddate = "//button[@aria-label='Saturday, January 31st, 2026']"
 
 
 //RewardCheckout
@@ -103,13 +103,14 @@ class Paymentgateway{
     rewardtab = "//span[@class='min-w-16 text-center'][normalize-space()='Rewards']" //xpath
     rewardcreation = "//span[normalize-space()='Create Reward']" //xpath
     rewardname = "#rewardName"
+    name =  "hgjh"
     rewardcatergory = "#categoryRef"
     rewardpoints = "#rewardPoints"
     startdate = "#startDate"
     enddate = "#endDate"
     userlimit = "#userLimit"
-    jule22 = "button[aria-label='Tuesday, July 22nd, 2025']"
-    june30 = "button[aria-label='Thursday, July 31st, 2025']"
+    jan29 = "button[aria-label='Thursday, January 29th, 2026']"
+    jan31 = "button[aria-label='Saturday, January 31st, 2026']"
 
 //Productspage
     productstab = "//span[@class='inline-flex text-nowrap'][normalize-space()='Products']" //xpath
@@ -145,7 +146,7 @@ createdispute = "//button[.//span[text()='Create Dispute']]" //xpath
 title = "#title"
 disputetype = "#type"
 transactionref = "#payment_reference"
-reference = "TEST-TCH-4TOuHRlxn"
+reference = "TEST-TCH-6xcOOKWHg"
 disputecatergory = "#category"
 
 //refund
@@ -449,17 +450,17 @@ multipledynamicqrcode() {
         cy.get('[cmdk-item]').eq(0).click(); // Select option
         cy.get('body').type('{esc}');
         cy.wait(2000)
-        cy.get(this.rewardpoints).type("60")
+        cy.get(this.rewardpoints).type("50")
         cy.get(this.startdate).click()
-        cy.get("button[aria-label='Sunday, July 27th, 2025']").click()
+        cy.get("button[aria-label='Thursday, January 29th, 2026']").click()
         cy.get('body').type('{esc}');
         cy.wait(2000)
         cy.get(this.enddate).click()
-        cy.get("button[aria-label='Thursday, July 31st, 2025']").click({ multiple: true })
+        cy.get("button[aria-label='Saturday, January 31st, 2026']").click({ multiple: true })
         cy.get('body').type('{esc}');
         cy.wait(2000)
         
-        cy.get(this.userlimit).type("3")
+        cy.get(this.userlimit).type("4")
         cy.get(this.submitbtn).click()
         cy.get(this.SuccessfulCreation).should('be.visible')
 
@@ -532,11 +533,11 @@ multipledynamicqrcode() {
         cy.get('#unlimited').click()
         cy.get('#expiration').click()
         cy.get(this.startdate).click()
-        cy.get("button[aria-label='Sunday, July 27th, 2025']").click()
+        cy.get("button[aria-label='Friday, January 30th, 2026']").click()
         
         cy.get('body').type('{esc}');
         cy.get('#endDate').click()
-        cy.get("button[aria-label='Thursday, July 31st, 2025']").click()
+        cy.get("button[aria-label='Saturday, January 31st, 2026']").click()
         
         cy.wait(4000)
         cy.get(this.submitbtn).click()

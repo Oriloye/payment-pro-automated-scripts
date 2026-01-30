@@ -6,7 +6,7 @@ class login{
     loginBtn = "button[type='submit']"
     otpField = "input[class='disabled:cursor-not-allowed']"
     email = "endurance+1000@blusalt.net"
-    password = "Ekundayo9189@@"
+    password = "Ekundayo9189@@@@"
     otp = "123456"
     submit = "button[type='submit']"
 
