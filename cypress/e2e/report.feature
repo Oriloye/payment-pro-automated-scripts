@@ -12,7 +12,7 @@ Background:
     #    Given i create dispute for a payment transaction report +   
 
     # Scenario: filter payment transaction report
-    #     Given i filter payment transaction report
+    #     Given i filter payment transaction report +
 
     # Scenario: funds transfer transaction report validation
     #    Given i validate single funds transfer transaction report +
