@@ -2,8 +2,9 @@ name: Run Cypress Tests
 
 on:
   push:
+  workflow_dispatch:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "0 6 * * *"  # runs daily at 6AM Lagos (5AM UTC)
 
 jobs:
   cypress-runner:
@@ -16,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
